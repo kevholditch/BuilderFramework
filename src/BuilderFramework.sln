@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderFramework", "BuilderFramework\BuilderFramework.csproj", "{6A955E34-C166-4240-8E73-66C67EFED9EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{33ED688B-1439-4635-909B-7532D7611E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderFramework.Tests", "BuilderFramework.Tests\BuilderFramework.Tests.csproj", "{C1411AB2-744C-47BB-BF9A-D541EA13E438}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A955E34-C166-4240-8E73-66C67EFED9EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A955E34-C166-4240-8E73-66C67EFED9EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A955E34-C166-4240-8E73-66C67EFED9EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A955E34-C166-4240-8E73-66C67EFED9EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1411AB2-744C-47BB-BF9A-D541EA13E438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1411AB2-744C-47BB-BF9A-D541EA13E438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1411AB2-744C-47BB-BF9A-D541EA13E438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1411AB2-744C-47BB-BF9A-D541EA13E438}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C1411AB2-744C-47BB-BF9A-D541EA13E438} = {33ED688B-1439-4635-909B-7532D7611E3C}
+	EndGlobalSection
+EndGlobal

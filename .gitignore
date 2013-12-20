@@ -1,0 +1,15 @@
+*.exe
+bin/
+_ReSharper.Rotation/
+obj/
+*.pdb
+*.crunchproject.local.xml
+*.crunchsolution.local.xml
+*.ncrunchproject
+*.ncrunchsolution
+*.crunchsolution*
+*.suo
+_NCrunch_Rotation/
+src/packages/*
+Rotation.suo
+*.ncrunchsolution.user
