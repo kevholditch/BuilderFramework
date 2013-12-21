@@ -10,6 +10,6 @@ obj/
 *.crunchsolution*
 *.suo
 _NCrunch_Rotation/
-src/packages/*
+packages/
 Rotation.suo
 *.ncrunchsolution.user
