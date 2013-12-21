@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BuilderFramework
 {
     public class Builder
     {
+        private readonly IBuildStepDependencySorter _buildStepDependencySorter;
         public List<IBuildStep> BuildSteps { get; private set; }
 
-        public Builder()
+        public Builder(IBuildStepDependencySorter buildStepDependencySorter)
         {
+            _buildStepDependencySorter = buildStepDependencySorter;
             BuildSteps = new List<IBuildStep>();
         }
 
@@ -24,9 +27,10 @@ namespace BuilderFramework
             return this;
         }
 
-        private void Execute(Action<IBuildStep> action)
+        private void Execute(IEnumerable<IBuildStep> buildSteps, Action<IBuildStep> action)
         {
-            foreach (var buildStep in BuildSteps)
+
+            foreach (var buildStep in buildSteps)
             {
                 action(buildStep);
             }
@@ -34,12 +38,14 @@ namespace BuilderFramework
 
         public void Commit()
         {
-            Execute(buildStep => buildStep.Commit());
+            Execute(_buildStepDependencySorter.Sort(BuildSteps), 
+                        buildStep => buildStep.Commit());
         }
 
         public void Rollback()
         {
-            Execute(buildStep => buildStep.Rollback());
+            Execute(_buildStepDependencySorter.Sort(BuildSteps).Reverse(), 
+                        buildStep => buildStep.Rollback());
         }
 
     }

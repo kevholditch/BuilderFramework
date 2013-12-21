@@ -40,7 +40,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builder.cs" />
+    <Compile Include="BuildStepDependencySorter.cs" />
+    <Compile Include="DependsOnAttribute.cs" />
+    <Compile Include="Exceptions\BuilderExeception.cs" />
+    <Compile Include="Exceptions\CircularDependencyException.cs" />
     <Compile Include="IBuildStep.cs" />
+    <Compile Include="IBuildStepDependencySorter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
