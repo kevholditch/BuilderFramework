@@ -72,8 +72,8 @@ To rollback:
     
 You can specify that one step depends on another using the DependsOnAttribute.  The builder will automatically execute the steps in dependency order (or throw a circular reference exception if you have a circular reference).
 
-   [DependsOn(typeof(ExampleBuildStep)] 
-   public class MyStepA : IBuildStep
+    [DependsOn(typeof(ExampleBuildStep)] 
+    public class MyStepA : IBuildStep
    
 If you use the depends on attribute the steps will be rolled back in the opposite order to which they are built in.  Allowing you to use the builder to commit changes to a database, run a test and then roll them back.  Note that the builder doesn't check to make sure you have actually included the dependent step, it will just ensure that the dependent step runs before this step (if its added to the builder).
    
